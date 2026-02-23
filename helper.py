@@ -55,6 +55,7 @@ def create_wordcloud(selected_user,df):
     temp = temp[temp["message"] != "<Media omitted>\n"]
     temp = temp[temp["message"] != "<Video note omitted>\n"]
     temp = temp[temp["message"] != "<message deleted>\n"]
+    temp = temp[temp["message"] != "<deleted message>\n"]
     temp = temp[temp["message"] != "<message edited>\n"]
 
     def remove_stop_words(message):
