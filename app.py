@@ -71,7 +71,7 @@ if uploaded_file is not None:
         with col2:
             month_series = helper.active_months(selected_user,df)
             fig,ax = plt.subplots()
-            ax.barh(month_series.index,month_series.values.tolist(),color="g")
+            ax.barh(month_series.index,month_series.values.tolist(),color="b")
             plt.xticks(rotation = "vertical")
             st.pyplot(fig)
 
