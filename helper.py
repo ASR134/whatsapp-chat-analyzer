@@ -121,7 +121,7 @@ def active_days(selected_user,df):
     
     return df["day_name"].value_counts()
 
-def active_moths(selected_user,df):
+def active_months(selected_user,df):
 
     if (selected_user != "Overall"):
         df = df[df["user"]==selected_user]
@@ -133,5 +133,5 @@ def activity_heatmap(selected_user,df):
         df = df[df["user"]==selected_user]
 
     mat =df.pivot_table(index="day_name",columns="period",values="message",aggfunc="count").fillna(0)
-    
+
     return mat

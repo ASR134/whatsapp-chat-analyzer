@@ -12,7 +12,7 @@ if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
 
-    data = bytes_data.decode(encoding="utf-8")
+    data = bytes_data.decode(encoding="utf-8") #string
     df = preprocessor.preprocess(data)
 
 
@@ -69,7 +69,7 @@ if uploaded_file is not None:
             st.pyplot(fig)
 
         with col2:
-            month_series = helper.active_days(selected_user,df)
+            month_series = helper.active_months(selected_user,df)
             fig,ax = plt.subplots()
             ax.barh(month_series.index,month_series.values.tolist(),color="g")
             plt.xticks(rotation = "vertical")
