@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# Environment variables / secrets
+.env
+
+# Virtual environments (if you create later)
+.venv/
+env/
+venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints (if you ever add notebooks)
+.ipynb_checkpoints/
+
+# Logs
+*.log
